@@ -16,7 +16,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_02_190636) do
 
   create_table "comments", force: :cascade do |t|
     t.text "text"
-    t.integer "comments_counter"
     t.bigint "author_id", null: false
     t.bigint "post_id", null: false
     t.datetime "created_at", null: false
