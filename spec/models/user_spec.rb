@@ -25,12 +25,12 @@ RSpec.describe User, type: :model do
         @user.name = nil
         expect(@user).to_not be_valid
       end
-    
+
       it 'has it\'s posts_counter greater than or equal to 0' do
         @user.posts_counter = -10
         expect(@user).to_not be_valid
       end
-    
+
       it 'has it\'s posts_counter set to 0 by default' do
         expect(@user.posts_counter).to eq 0
         expect(@user).to be_valid
