@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
   # Posts
   get 'users/:user_id/posts' => 'posts#index'
-  # get 'users/:id/posts/:id' => 'users#post_id'
+  get 'users/:user_id/posts/:id' => 'posts#show'
 end
