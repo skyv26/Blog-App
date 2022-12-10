@@ -6,5 +6,10 @@ RSpec.describe "Users", type: :request do
       get ''
       expect(response.status).to eql(200)
     end
+
+    it 'should be passed with correct template' do
+      get '/'
+      expect(response.status).to render_template(:index)
+    end
   end
 end
