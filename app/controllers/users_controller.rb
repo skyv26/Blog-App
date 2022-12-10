@@ -3,5 +3,6 @@ class UsersController < ApplicationController
   end
 
   def show
+    @id = request.parameters[:id]
   end
 end
