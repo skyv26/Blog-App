@@ -2,6 +2,8 @@
 <h1>List of All Users</h1>
 <ul class="users_container">
   <% @all_users.each do |user| %>
-    <%= render 'shared/user-card', user: user %>
+    <%= link_to user_id_path(user.id) do %>
+      <%= render :partial => 'shared/user-card', :locals => {user: user} %>
+    <% end %>
   <% end %>
 </ul>
