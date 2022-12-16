@@ -6,4 +6,8 @@ class Comment < ApplicationRecord
   def comment_counter
     post.update(comments_counter: post.comments.all.length)
   end
+
+  def user(id)
+    User.find(id)
+  end
 end
