@@ -7,11 +7,7 @@
   </div>
   <ul class="user_posts-container">
     <% @posts.each_with_index do |post, index| %>
-      <li class="post_list">
-        <p class="heading">Post #<%= index+1 %></p>
-        <p class="post_detail"><%= post.text[0..120]... %></p>
-        <p class="post_interactions">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
-      </li>
+      <%= render 'shared/post-card', post: post, index: index %>
     <% end %>
   </ul>
   <%= link_to 'See All Post', "#{@user.id}/posts", target: '_blank', class: 'see-btn' %>
