@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @user_id = request.parameters[:user_id]
+    @user = User.find(request.parameters[:user_id])
   end
 
   def show
