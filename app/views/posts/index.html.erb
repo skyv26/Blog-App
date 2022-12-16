@@ -1,1 +1,9 @@
-<h1>List of all posts by user (<%= @user_id%>)</h1>
+<%= stylesheet_link_tag "posts_controller" %>
+<div class="post-container">
+  <%= render :partial => 'shared/user-card', :locals => {user: @user} %>
+  <% @user.recent_posts.each_with_index do |post, index| %>
+    <%= link_to post_id_path(@user.id,post.id) do %>
+      <%= render 'shared/post-card', post: post, index: index, brief: true, comment: true %>
+    <% end %>
+  <% end %>
+</div>
