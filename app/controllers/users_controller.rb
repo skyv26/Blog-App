@@ -5,6 +5,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(request.parameters[:id].to_i)
-    puts @user
+    @posts = Post.where(author: @user)
   end
 end
