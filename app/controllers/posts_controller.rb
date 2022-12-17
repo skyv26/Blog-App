@@ -4,7 +4,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @user_id = request.parameters[:user_id]
-    @post_id = request.parameters[:id]
+    @post = Post.find(request.parameters[:id])
   end
 end
