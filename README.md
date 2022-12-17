@@ -133,9 +133,9 @@ OR
 
 > In upcoming weeks I will add some features as mentioned below
 
-- [ ] **Processing data in models.**
-- [ ] **Validations, Model specs, and n+1 problems.**
-- [ ] **Integration specs for Views.**
+- [ ] **Forms Implementation For Adding User and Post**
+- [ ] **Authentication and Authorization**
+- [ ] **High-Fidelity UI**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
