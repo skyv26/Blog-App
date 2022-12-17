@@ -30,6 +30,7 @@ html {
 body {
   min-height: 100%;
   width: 100%;
+  padding: 4rem;
 }
 
 a {
@@ -39,4 +40,16 @@ a {
 
 ul {
   list-style: none;
+}
+
+form {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+input {
+  height: 3rem;
+  padding: 0.25rem;
 }
