@@ -12,6 +12,10 @@ class Post < ApplicationRecord
     comments.order(created_at: :desc).limit(5)
   end
 
+  def all_comments
+    comments.order(created_at: :desc)
+  end
+
   def post_count
     author.update(posts_counter: author.posts.all.length)
   end

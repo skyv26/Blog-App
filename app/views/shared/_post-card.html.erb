@@ -1,12 +1,18 @@
 <li class="post_list">
-  <p class="heading">Post #<%= index+1 %></p>
+  <p class="heading">Post #<%= post.id %></p>
   <p class="post_detail"><%= brief ? post.text[0..120]... : post.text %></p>
   <p class="post_interactions">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
 </li>
 <% if comment %>
   <ul class="comment-container">
-    <% post.recent_comments.each do |comment| %>
-      <li class="comment"><%= comment.user(comment.author_id).name %>: <%= comment.text %></li>
+    <% if all %>
+      <% post.all_comments.each do |comment| %>
+        <li class="comment"><%= comment.user(comment.author_id).name %>: <%= comment.text %></li>
+      <% end %>
+    <% else %>
+      <% post.recent_comments.each do |comment| %>
+        <li class="comment"><%= comment.user(comment.author_id).name %>: <%= comment.text %></li>
+      <% end %>
     <% end %>
   </ul>
 <% end %>
