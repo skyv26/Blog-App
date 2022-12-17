@@ -1,5 +1,9 @@
 <%= stylesheet_link_tag "users_controller" %>
 <h1>List of All Users</h1>
+<br>
+<br>
+<br>
+<%= link_to 'Create a Post ', post_new_path(@user.id), class: 'comment-btn' %>
 <ul class="users_container">
   <% @all_users.each do |user| %>
     <%= link_to user_id_path(user.id) do %>

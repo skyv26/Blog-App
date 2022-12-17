@@ -1,4 +1,6 @@
 <%= stylesheet_link_tag "posts_controller" %>
 <div class="post-container">
   <%= render 'shared/post-card', post: @post, index: @post.id, brief: false, comment: true, all: true %>
+  <%= link_to 'Comment ', "#{request.url}/comments/new", class: 'comment-btn' %>
+  <%= link_to 'Like ', "#{request.url}/likes/new", class: 'comment-btn' %>
 </div>
