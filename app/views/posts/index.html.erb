@@ -2,7 +2,7 @@
 <div class="post-container">
   <%= render :partial => 'shared/user-card', :locals => {user: @user} %>
   <% @user.recent_posts.each_with_index do |post, index| %>
-    <%= link_to post_id_path(@user.id,post.id) do %>
+    <%= link_to post_id_path(@user.id,index + 1) do %>
       <%= render 'shared/post-card', post: post, index: index, brief: true, comment: true %>
     <% end %>
   <% end %>
