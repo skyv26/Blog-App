@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   #Comments
 
   get 'users/:user_id/posts/:id/comments/new' => 'comments#new', as: :comments_new
+  post 'users/:user_id/posts/:id/comments' => 'comments#create', as: :comment
 end
