@@ -1,1 +1,14 @@
-<h1><%= @id%></h1>
+<%= stylesheet_link_tag "users_controller" %>
+<ul class="users_container">
+  <%= render 'shared/user-card', user: @user %>
+  <div class="bio-box">
+    <p class="heading">Bio</p>
+    <p class="bio-info"><%= @user.bio %></p>
+  </div>
+  <ul class="user_posts-container">
+    <% @user.recent_posts.each_with_index do |post, index| %>
+      <%= render 'shared/post-card', post: post, index: post.id, brief: true, comment: false, all: false %>
+    <% end %>
+  </ul>
+  <%= link_to 'See All Post', "#{@user.id}/posts", target: '_blank', class: 'see-btn' %>
+</ul>

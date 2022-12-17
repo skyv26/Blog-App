@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
-  def index; end
+  def index
+    @all_users = User.all
+  end
 
   def show
-    @id = request.parameters[:id]
+    @user = User.find(request.parameters[:id].to_i)
   end
 end

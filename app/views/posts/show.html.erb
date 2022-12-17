@@ -1,1 +1,4 @@
-<h1>User: <%= @user_id %>, Post : <%= @post_id%></h1>
+<%= stylesheet_link_tag "posts_controller" %>
+<div class="post-container">
+  <%= render 'shared/post-card', post: @post, index: @post.id, brief: false, comment: true, all: true %>
+</div>
