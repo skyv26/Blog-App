@@ -54,7 +54,8 @@ input {
   padding: 0.25rem;
 }
 
-.actions, .field {
+.actions,
+.field {
   display: flex;
   font-size: 1.25rem;
   align-items: center;
