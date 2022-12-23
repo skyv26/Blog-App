@@ -80,3 +80,5 @@ group :test do
 end
 
 gem "bullet", "~> 7.0"
+
+gem "database_cleaner", "~> 2.0"
