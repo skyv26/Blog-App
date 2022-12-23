@@ -84,3 +84,5 @@ gem 'bullet', '~> 7.0'
 gem 'database_cleaner', '~> 2.0'
 
 gem "devise", "~> 4.8"
+
+gem "letter_opener", "~> 1.8"
