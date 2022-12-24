@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
   get 'users/:user_id/posts/:id/comments/new' => 'comments#new', as: :comments_new
   post 'users/:user_id/posts/:id/comments' => 'comments#create', as: :comment
-  delete 'users/:user_id/posts/:id/comments' => 'comments#destroy'
+  delete 'users/:user_id/posts/:id/comment/:comment_id' => 'comments#destroy', as: :comment_destroy
 
   #likes
   get 'users/:user_id/posts/:id/likes/new' => 'likes#create', as: :likes_create
