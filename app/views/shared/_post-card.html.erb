@@ -12,7 +12,7 @@
         <li class="comment">
           <%= comment.user(comment.author_id).name %>: <%= comment.text %>
           <% if can? :destroy, comment %>
-            <%= button_to "Delete Comment",  post_id_path(@user.id, @post.id), method: :delete, class: "delete-btn" %>
+            <%= button_to "Delete Comment", comment_destroy_path(user.id, post.id, comment.id), method: :delete, class: "delete-btn" %>
           <% end %>
         </li>
       <% end %>
@@ -20,9 +20,6 @@
       <% post.recent_comments.each do |comment| %>
         <li class="comment">
           <%= comment.user(comment.author_id).name %>: <%= comment.text %>
-          <% if can? :destroy, comment %>
-            <%= button_to "Delete Comment",  comment_destroy_path(@user.id, post.id), method: :delete, class: "delete-btn" %>
-          <% end %>
         </li>
       <% end %>
     <% end %>
