@@ -302,7 +302,16 @@ Devise.setup do |config|
   # ActiveSupport.on_load(:devise_failure_app) do
   #   include Turbolinks::Controller
   # end
-
+  config.jwt do |jwt|
+    jwt.secret = "asdsfhdafjkdsjkfsdkjhfjksdhfjkasdhjkfhsdjkhfsdjfkjsdhfjksdhjkfhsdjkddfdsd985646sdvsdvsvdsd"
+    jwt.dispatch_requests = [
+      ["POST", %r{^/users/sign_in$}],
+    ]
+    jwt.revocation_requests = [
+      ["DELETE", %r{^/users/sign_out}],
+    ]
+    jwt.expiration_time = 120.minutes.to_i
+  end
   # ==> Configuration for :registerable
 
   # When set to false, does not sign a user in automatically after their password is
