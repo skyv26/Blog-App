@@ -9,11 +9,21 @@
   <ul class="comment-container">
     <% if all %>
       <% post.all_comments.each do |comment| %>
-        <li class="comment"><%= comment.user(comment.author_id).name %>: <%= comment.text %></li>
+        <li class="comment">
+          <%= comment.user(comment.author_id).name %>: <%= comment.text %>
+          <% if can? :destroy, comment %>
+            <%= button_to "Delete Comment",  post_id_path(@user.id, @post.id), method: :delete, class: "delete-btn" %>
+          <% end %>
+        </li>
       <% end %>
     <% else %>
       <% post.recent_comments.each do |comment| %>
-        <li class="comment"><%= comment.user(comment.author_id).name %>: <%= comment.text %></li>
+        <li class="comment">
+          <%= comment.user(comment.author_id).name %>: <%= comment.text %>
+          <% if can? :destroy, comment %>
+            <%= button_to "Delete Comment",  comment_destroy_path(@user.id, post.id), method: :delete, class: "delete-btn" %>
+          <% end %>
+        </li>
       <% end %>
     <% end %>
   </ul>
