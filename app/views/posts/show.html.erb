@@ -3,4 +3,7 @@
   <%= render 'shared/post-card', post: @post, user: @user, index: @post.id, brief: false, comment: true, all: true %>
   <%= link_to 'Comment ', "#{request.url}/comments/new", class: 'comment-btn' %>
   <%= link_to 'Like ', "#{request.url}/likes/new", class: 'comment-btn' %>
+  <% if can? :destroy, @post %>
+    <%= link_to 'Delete',post_destroy_path, class: 'comment-btn', style: 'background-color: red' %>
+  <% end %>
 </div>
