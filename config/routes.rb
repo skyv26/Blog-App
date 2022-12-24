@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     root to: 'devise/sessions#new'
   end
   
-
   # Users
   get 'users/:id' => 'users#show', as: :user_id
 
