@@ -89,4 +89,4 @@ gem 'letter_opener', '~> 1.8'
 
 gem 'cancancan', '~> 3.4'
 
-gem "devise-jwt", "~> 0.10.0"
+gem 'devise-jwt', '~> 0.10.0'
