@@ -4,6 +4,6 @@
   <%= link_to 'Comment ', "#{request.url}/comments/new", class: 'comment-btn' %>
   <%= link_to 'Like ', "#{request.url}/likes/new", class: 'comment-btn' %>
   <% if can? :destroy, @post %>
-    <%= link_to 'Delete',post_destroy_path, class: 'comment-btn', style: 'background-color: red' %>
+    <%= button_to 'Delete', post_id_path(@user.id, @post.id), :method => :delete, class: 'comment-btn', style: 'background-color: red' %>
   <% end %>
 </div>

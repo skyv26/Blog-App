@@ -20,4 +20,10 @@ class PostsController < ApplicationController
     @post = Post.find(request.parameters[:id])
     @user = User.find(params[:user_id])
   end
+
+  def destroy
+    @post = Post.find(request.parameters[:id])
+    @post.destroy
+    redirect_to all_post_path(params[:user_id])
+  end
 end
