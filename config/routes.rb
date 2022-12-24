@@ -6,8 +6,20 @@ Rails.application.routes.draw do
   devise_scope :users do
     root to: 'devise/sessions#new'
   end
-  
 
+  namespace :api do
+    namespace :v1 do
+      resources :users do
+        resources :posts do
+          resources :comments
+          resources :likes
+      end
+    end
+  end
+
+  end
+
+  
   # Users
   get 'users/:id' => 'users#show', as: :user_id
 
