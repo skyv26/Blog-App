@@ -78,3 +78,11 @@ input[type="submit"] {
   color: blueviolet;
   line-height: 1.6;
 }
+
+.comment-btn {
+  padding: 1rem 2rem;
+  background-color: blueviolet;
+  color: white;
+  font-size: 1.6rem;
+  width: max-content;
+}
