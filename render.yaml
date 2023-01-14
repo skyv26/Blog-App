@@ -1,0 +1,18 @@
+databases:
+  - name: Blog_App
+    databaseName: Blog_App
+    user: Blog_App
+
+services:
+  - type: web
+    name: Blog_App
+    env: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: Blog_App
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
