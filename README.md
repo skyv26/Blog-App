@@ -22,11 +22,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Blog App] <a name="about-project"></a>
+# 📖 Blog App <a name="about-project"></a>
 
 > The Blog app is a classic blog design website. ln which we can create, show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-**[Blog App]** is a ruby blog website.
+**[LBlog App** is a ruby blog website.
 
 ## 🛠 Built With <a name="built-with"></a>
 
