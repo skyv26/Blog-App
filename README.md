@@ -133,10 +133,16 @@ OR
 
 > In upcoming weeks I will add some features as mentioned below
 
+<<<<<<< HEAD
 - [ ] **Processing data in models.**
 - [ ] **Validations, Model specs, and n+1 problems.**
 - [ ] **Integration specs for Views.**
 - [ ] **API and JWT**
+=======
+- [ ] **Forms Implementation For Adding User and Post**
+- [ ] **Authentication and Authorization**
+- [ ] **High-Fidelity UI**
+>>>>>>> 5e2f5ea... Updated the `README.md` file
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
