@@ -1,0 +1,27 @@
+<li class="post_list">
+  <p class="heading">Post #<%= post.id %></p>
+  <p class="heading"><%= post.title %></p>
+  <p class="post_detail"><%= brief ? post.text[0..120]... : post.text %></p>
+  <p class="heading"><%= user.name %></p>
+  <p class="post_interactions">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
+</li>
+<% if comment %>
+  <ul class="comment-container">
+    <% if all %>
+      <% post.all_comments.each do |comment| %>
+        <li class="comment">
+          <%= comment.user(comment.author_id).name %>: <%= comment.text %>
+          <% if can? :destroy, comment %>
+            <%= button_to "Delete Comment", comment_destroy_path(user.id, post.id, comment.id), method: :delete, class: "delete-btn" %>
+          <% end %>
+        </li>
+      <% end %>
+    <% else %>
+      <% post.recent_comments.each do |comment| %>
+        <li class="comment">
+          <%= comment.user(comment.author_id).name %>: <%= comment.text %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+<% end %>

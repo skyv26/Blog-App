@@ -22,11 +22,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Blog App] <a name="about-project"></a>
+# 📖 Blog App <a name="about-project"></a>
 
 > The Blog app is a classic blog design website. ln which we can create, show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
-**[Blog App]** is a ruby blog website.
+**[LBlog App** is a ruby blog website.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -119,11 +119,17 @@ OR
 
 > Mention all of the collaborators of this project.
 
-👨‍💻 **Author1**
+👨‍💻 **Aakash Verma**
 
 - GitHub: [@skyv26](https://github.com/skyv26)
 - Twitter: [@vrma_aakash](https://twitter.com/vrma_aakash)
 - LinkedIn: [skyv2022](https://linkedin.com/in/skyv2022)
+
+👨‍💻 **Bantealem Geto**
+
+- GitHub: [@skyv26](https://github.com/bantealem)
+- Twitter: [@vrma_aakash](https://twitter.com/BantealemG)
+- LinkedIn: [skyv2022](https://linkedin.com/in/bantealem-geto-a301b9213)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,10 +139,10 @@ OR
 
 > In upcoming weeks I will add some features as mentioned below
 
-- [ ] **Processing data in models.**
-- [ ] **Validations, Model specs, and n+1 problems.**
-- [ ] **Integration specs for Views.**
-- [ ] **API and JWT**
+- [ ] **Authentication and Authorization**
+- [ ] **API & Documentation**
+- [ ] **High-Fidelity UI**
+- [ ] **JWT Authentication**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

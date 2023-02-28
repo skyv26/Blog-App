@@ -1,0 +1,33 @@
+.post-container {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 8rem;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+li {
+  list-style-type: none;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  border: 1px solid #aaa;
+  padding: 1rem;
+}
+
+.comment {
+  font-size: inherit;
+}
+
+.comment-btn {
+  padding: 1rem 2rem;
+  background-color: blueviolet;
+  color: white;
+  font-size: 1.6rem;
+  width: max-content;
+}
